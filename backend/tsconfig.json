@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "noEmit": true,
+    "incremental": true,
+    "paths": {
+      "@api/*": ["api/*"],
+      "@config/*": ["config/*"],
+      "@core/*": ["core/*"],
+      "@db/*": ["database/*"],
+      "@utils/*": ["core/utils/*"],
+      "@typings/*": ["typings/*"]
+    }
+  },
+  "include": ["src/**/*", "src/typings/**/*",  "src/typings/mongoose.d.ts"],
+  "exclude": ["node_modules", "dist", "src/utils"],
+  "ts-node": {
+    "esm": true,
+    "transpileOnly": true,
+    "files": true,
+    "experimentalSpecifierResolution": "node"
+  }
+}
